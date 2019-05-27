@@ -5,9 +5,13 @@
 # You may not use any Enum derived iterations, only for, while or until
 
 def linear_search(target, searchfrom)
-	#Your code here
+	for x in searchfrom do
+		if x == target
+			return searchfrom.index(x)
+		end
+	end
+	"not found"
 end
-
 random_numbers = [6,29,18,2,72,19,18,10,37]
 p linear_search(18, random_numbers)
 p linear_search(9, random_numbers)

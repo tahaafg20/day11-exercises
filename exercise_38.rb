@@ -4,7 +4,9 @@
 # You may not use the Array#sort method in your solution
 
 # Write Your method code here
-
+def is_sorted?(array)
+    array.each_cons(2).all? {|a, b|a <= b}
+end
 # Driver Code: Do not edit under this line
 
 # check_solution runs a single test case and prints whether it was

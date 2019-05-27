@@ -5,9 +5,12 @@
 # This means that the object_id of the input array should be identical to the object_id of the returned array. 
 
 # Write Your method code here
+def element_swap!(array, index_1, index_2)
+array[index_1], array[index_2] = array[index_2], array[index_1]
 
+return array
+end
 # Driver Code: Do not edit under this line
-
 # check_solution runs a single test case and prints whether it was
 # successful or not.
 def check_solution(test_number, array, index_1, index_2, expected)

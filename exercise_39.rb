@@ -4,7 +4,23 @@
 # You may not use the Array#sort method in your solution
 
 # Write Your method code here
-
+def bubble_sort(array)
+    # find the amount of array elements
+    a = array.length
+    # set a boolean variable called swept.
+   swept = true
+    # start a while loop
+   while swept do
+     swept = false
+     (a - 1).times do |i|
+       if array[i] > array[i + 1]
+         array[i], array[i + 1] = array[i + 1], array[i]
+     swept = true
+       end
+     end
+   end
+   return array
+end
 # Driver Code: Do not edit under this line
 
 # check_solution runs a single test case and prints whether it was

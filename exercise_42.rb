@@ -2,9 +2,18 @@
 # Write a method, compress_string(string), that accepts a string as input
 # The method should return a new string where streaks of consecutive characters are compressed to a number followed by the character.
 # For example "aaabbc" is compressed to "3a2bc".
-
 # Write Your method code here
-
+def compress_string(string)
+    string = string.split("")
+    hash = Hash.new(0)
+  string.each{|key| hash[key] += 1}
+  hash.each do |k, v|
+    if v > 1
+        "#{v}""#{k}"
+    end
+end
+hash
+end
 # Driver Code: Do not edit under this line
 
 # check_solution runs a single test case and prints whether it was

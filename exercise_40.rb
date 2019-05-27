@@ -5,7 +5,19 @@
 # The first or last element of the array is considered a "peak" if it is greater than it's one neighbour
 
 # Write Your method code here
-
+def find_peaks(array)
+    peaks = []
+    array.each_with_index do |x, index|
+        if (array[index] > [(index+1)]) && (array[index] > array[(index-1)])
+            peaks << array[index]
+        elsif array.first > array[1]
+            peaks << array.first
+        elsif array.last > array[(array.size-1)]
+            peaks << array.last
+        end
+    end
+    return peaks
+end
 # Driver Code: Do not edit under this line
 
 # check_solution runs a single test case and prints whether it was
